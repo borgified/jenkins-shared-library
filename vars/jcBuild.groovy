@@ -20,7 +20,7 @@ def call(Map args) {
       catch ( Exception e)
       {
         println(e.getMessage());
-        jcSendFailureSlackNotification(channel: "jc-testing", currentStep: "Build Failed", errorMsg: e.getMessage(), JOB_NAME: "${args.JOB_NAME}", BUILD_URL: "${args.BUILD_URL}")
+        jcSendFailureSlackNotification(channel: "jenkins-testing", currentStep: "Build Failed", errorMsg: e.getMessage(), JOB_NAME: "${args.JOB_NAME}", BUILD_URL: "${args.BUILD_URL}")
         error "Job Run failed, please read logs..."
       }
     }
