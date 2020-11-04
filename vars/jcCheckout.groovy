@@ -14,7 +14,7 @@ def call(Map args) {
                          checkout poll: false, scm: [$class: 'GitSCM', branches: [[name: "*/${args.branch}"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'LocalBranch', localBranch: "${args.branch}"], [$class: 'UserExclusion', excludedUsers: '''jenkins
                                                                                                                                                                                                                               devopsatmsh
                                                                                                                                                                                                                                 DevOps
-                                                                                                                                                                                                                                devops''']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '83dbdd19-8fbd-441c-9a68-efbafc192ab6', url: "${args.git_location}"]]]
+                                                                                                                                                                                                                                devops''']], submoduleCfg: [], userRemoteConfigs: []]
 
       }
       catch ( Exception e)
